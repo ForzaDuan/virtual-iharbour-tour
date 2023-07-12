@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>西安交通大学泓理楼</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Load fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+        var x = document.getElementById("cioaTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <div class="topnav" id="cioaTopnav">
+      <a class="nav" href="./index.html">简介</a>
+      <a class="nav" href="./tour.html">虚拟之旅</a>
+      <a class="nav active" href="./contact.html">联系我们</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="contact-page">
+      <h2>联系我们</h2>
+      <h3>
+        如果你希望了解更多关于西安交通大学创新港校区以及四号巨构泓理楼的信息，请进入西安交通大学创新港的
+        <b><a href="http://iharbour.xjtu.edu.cn/">官网</a></b> 浏览更多的信息。
+      </h3>
+      <table><tr>
+        <td><img src="./pics/profile.jpg" width="600px" border=0></td>
+        <td><img src="./pics/profile2.jpg" width="600px" border=0></td>
+        <td><img src="./pics/profile3.jpg" width="600px" border=0></td>
+        </tr></table>
+      <br />
+      <h3>
+        此网页由<b>段建宇、钟黄伟、钟敏、李帅、王浩龙</b>完成，如果有问题以及建议，请通过邮箱<i><b>djy0304@xjtu.edu.cn</b></i>联系我们。
+      </h3>
+    </div>
+  </body>
+</html>

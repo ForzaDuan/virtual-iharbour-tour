@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>西安交通大学泓理楼</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"
+      
+    ></script> -->
+    <link rel="stylesheet" href="./css/pannellum.css"/>
+    <script type="text/javascript" src="./js/libpannellum.js"></script>
+    <script type="text/javascript" src="./js/pannellum.js"></script>
+    
+    <style>
+      #panorama {
+        width: 99vw;
+        height: 95vh;
+        margin: 0;
+        padding: 0;
+      }
+      div.custom-tooltip span {
+        visibility: hidden;
+        position: absolute;
+        border-radius: .1875rem;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        min-width: 18.75rem;
+        max-width: 31.25rem;
+        padding: .9375rem .9375rem;
+        margin-left: -13.75rem;
+        cursor: default;
+      }
+      div.custom-tooltip a {
+        color: rgb(48, 207, 207);
+      }
+      div.custom-tooltip:hover span{
+        visibility: visible;
+      }
+      div.custom-tooltip:hover span:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: .625rem;
+        border-style: solid;
+        border-color: #000 transparent transparent transparent;
+        bottom: -1.25rem;
+        left: -0.625rem;
+        margin: 0 50%;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Load fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script>
+      /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+        var x = document.getElementById("cioaTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+    <div class="topnav" id="cioaTopnav">
+      <a class="nav" href="./index.html">简介</a>
+      <a class="nav active" href="./tour.html">虚拟之旅</a>
+      <a class="nav" href="./contact.html">联系我们</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div id="panorama"></div>
+    <script>
+    var viewer = pannellum.viewer(
+        'panorama', {
+        "default": {
+                "firstScene": "scene1",
+                "autoLoad": false
+            },
+        "scenes": {
+            "scene1":{
+                "title": "西安交通大学智能控制与工业大数据研究所",
+                "type": "equirectangular",
+                "panorama": "./pics/honglilou.jpg",
+                "vaov":120,
+                "compass": true,
+                "hotSpots": [
+                            {
+                                "pitch": -13,
+                                "yaw": 34,
+                                "type": "info",
+                                "text": "共享单车"
+                            },
+                            {
+                                "pitch": -2,
+                                "yaw": 57,
+                                "type": "info",
+                                "text": "物理科学与技术研究院"
+                            },
+                            {
+                                "pitch": -5,
+                                "yaw": 165,
+                                "type": "info",
+                                "text": "足球场"
+                            },
+                            {
+                                "pitch": -4,
+                                "yaw": 108,
+                                "type": "info",
+                                "text": "C区学生宿舍——朗园"
+                            },
+                            {
+                                "pitch": -5,
+                                "yaw": -155,
+                                "type": "info",
+                                "text": "B区学生宿舍——惠园",
+                            },
+
+                            {
+                                "pitch": 3,
+                                "yaw": -169,
+                                "type": "info",
+                                "text": "食堂——惠风苑",
+                            },
+                            {
+                                "pitch":-12,
+                                "yaw": -18,
+                                "type": "scene",
+                                "text": "进入泓理楼",
+                                "sceneId": "honglilounei",
+                            },
+                            {
+                                "pitch":-12,
+                                "yaw": -16,
+                                "type": "info",
+                                "text": "进入泓理楼",
+                                "video": "./video/1.mp4",
+                                
+                            }
+                ]
+
+            },
+            "honglilounei":{
+                "title": "走廊",
+                "type": "equirectangular",
+                "panorama": "./pics/honglilounei.jpg",
+                "vaov":120,
+                "compass": true,
+                "hotSpots": [
+                            {
+                                "pitch": 1,
+                                "yaw": 38,
+                                "type": "scene",
+                                "text": "电梯口",
+                                "sceneId": "lift_door"
+                            },
+                {
+                    "pitch": -3,
+                    "yaw": -28,
+                    "type": "info",
+                    "text": "思源环北路"
+                },
+                {
+                    "pitch": -1,
+                    "yaw": 8,
+                    "type": "info",
+                    "text": "保卫处与物业管理中心"
+                },
+                        ]         
+            },
+            "lift_door":{
+                    "title": "电梯口",
+                    "type": "equirectangular",
+                    "panorama": "./pics/lift_door.jpg",
+                    "vaov":100,
+            "haov":320,
+                    "compass": true,
+                    "hotSpots": [
+                                {
+                                    "pitch": -4,
+                                    "yaw": 23,
+                                    "type": "scene",
+                                    "text": "电梯",
+                                    "sceneId": "in_lift"
+                                },
+                                {
+                                    "pitch": 0,
+                                    "yaw": -138,
+                                    "type": "scene",
+                                    "text": "返回泓理楼内",
+                                    "sceneId": "honglilounei"
+                                },
+                                {
+                                    "pitch": -4,
+                                    "yaw": 21,
+                                    "type": "info",
+                                    "text": "进入电梯",
+                                    "video": "./video/2.mp4"
+                                },
+
+                            ]         
+            },
+            "in_lift":{
+                    "title": "电梯内",
+                    "type": "equirectangular",
+                    "panorama": "./pics/in_lift.jpg",
+                    "vaov":80,
+                    "haov":280,
+                    "compass": true,
+                    "hotSpots": [
+                                {
+                                    "pitch": -3,
+                                    "yaw": -10,
+                                    "type": "scene",
+                                    "text": "电梯门打开",
+                                    "sceneId": "lab_sign"
+                                },
+                                {
+                                  "pitch": -3,
+                                  "yaw": -12,
+                                  "type": "info",
+                                  "text": "走出电梯",
+                                  "video": "./video/3.mp4"
+                                },
+                            ]         
+            },
+        "lab_sign":{
+                "title": "智能控制与工业大数据研究所",
+                "type": "equirectangular",
+                "panorama": "./pics/lab_sign.jpg",
+                "vaov":90,
+                "haov":270,
+                "compass": true,
+                "hotSpots": [
+                            {
+                                "pitch": 3,
+                                "yaw": -115,
+                                "type": "scene",
+                                "text": "教研室走廊",
+                                "sceneId": "lab5183"
+                            },
+                            {
+                                "pitch": 1,
+                                "yaw": 25,
+                                "type": "info",
+                                "text": "会议室4-5188"
+                            },
+                            {
+                                "pitch": 3,
+                                "yaw": 70,
+                                "type": "info",
+                                "text": "走廊"
+                            },
+                            {
+                                "pitch": 10,
+                                "yaw": -25,
+                                "type": "info",
+                                "text": "平面图",
+                                "image": "./pics/pingmiantu.jpg"
+                            }
+                        ]         
+        },
+        "lab5183":{
+                "title": "走廊",
+                "type": "equirectangular",
+                "panorama": "./pics/lab5183.jpg",
+                "vaov":90,
+            "haov":350,
+                "compass": true,
+                "hotSpots": [
+                            {
+                                "pitch": -3,
+                                "yaw": -75,
+                                "type": "scene",
+                                "text": "教研室5183内景",
+                                "sceneId": "lab5183_indoor"
+                            },
+                  {
+                      "pitch": -3,
+                      "yaw": 130,
+                      "type": "scene",
+                      "text": "返回智能控制与工业大数据指引牌",
+                      "sceneId": "lab_sign"
+                  },
+                        ]         
+        },
+        "lab5183_indoor":{
+                "title": "教研室",
+                "type": "equirectangular",
+                "panorama": "./pics/lab5183_indoor.jpg",
+                "vaov":90,
+            "haov":360,
+                "compass": true,
+                "hotSpots": [
+                  {
+                    "pitch": -1,
+                    "yaw": -104,
+                    "type": "info",
+                    "text": "绿萝盆栽"
+                  },
+                  {
+                    "pitch": -24,
+                    "yaw": -39,
+                    "type": "info",
+                    "text": "绿萝盆栽"
+                  },
+                  {
+                    "pitch": -1,
+                    "yaw": -10,
+                    "type": "info",
+                    "text": "绿萝盆栽"
+                  },
+                  {
+                    "pitch": -22,
+                    "yaw": -147,
+                    "type": "info",
+                    "text": "学生工位"
+                  },
+                            {
+                                "pitch": 6,
+                                "yaw": -118,
+                                "type": "scene",
+                                "text": "机器视觉实验室",
+                                "sceneId": "robotlab"
+                            },
+                  {
+                      "pitch": 6,
+                      "yaw": -67,
+                      "type": "scene",
+                      "text": "返回走廊",
+                      "sceneId": "lab5183"
+                  },
+                  {
+                      "pitch": 5,
+                      "yaw": -3,
+                      "type": "scene",
+                      "text": "返回走廊",
+                      "sceneId": "lab5183"
+                  }
+                        ]         
+        },
+        "robotlab":{
+                "title": "机器视觉实验室",
+                "type": "equirectangular",
+                "panorama": "./pics/robotlab.jpg",
+                "vaov":90,
+            "haov":350,
+                "compass": true,
+                "hotSpots": [
+                            {
+                                "pitch": -10,
+                                "yaw": -110,
+                                "type": "scene",
+                                "text": "返回教研室5183",
+                                "sceneId": "lab5183_indoor"
+                            },
+                  {
+                      "pitch": -10,
+                      "yaw": 80,
+                      "type": "info",
+                      "text": "覆铜板在线缺陷检测装置",
+                  },
+                  {
+                      "pitch": -32,
+                      "yaw": -8,
+                      "type": "info",
+                      "text": "服务器",
+                  },
+                  {
+                      "pitch": 2,
+                      "yaw": -8,
+                      "type": "info",
+                      "text": "资料柜",
+                  },
+                        ]         
+        },
+        
+        }
+        
+    }
+    );
+    var bounds = [-45, 45];
+    viewer.setPitchBounds(bounds);
+</script>
+</body>
+</html>
+</iframe>
